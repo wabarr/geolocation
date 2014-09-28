@@ -1,0 +1,28 @@
+<html>
+	<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+	</head>
+	
+	<body>
+	<button onclick="getLocation()">Try It</button>
+	<p id="demo">Click to get your coordinates</p>
+	
+		<script>
+		var x = document.getElementById("demo");
+		alert("gotit");
+		function getLocation() {
+		    if (navigator.geolocation) {
+		    	alert("through the if");
+			navigator.geolocation.getCurrentPosition(showPosition);
+		    } else {
+			x.innerHTML = "Geolocation is not supported by this browser.";
+		    }
+		}
+		function showPosition(position) {
+		    alert("in showpos");
+		    x.innerHTML = "Latitude: " + position.coords.latitude + 
+		    "<br>Longitude: " + position.coords.longitude; 
+		}
+		</script>
+	</body>
+</html>
