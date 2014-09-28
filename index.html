@@ -11,6 +11,7 @@
 		var x = document.getElementById("demo");
 		function getLocation() {
 		    if (navigator.geolocation) {
+		    	$("#demo").html("Finding you on planet earth")
 			navigator.geolocation.getCurrentPosition(showPosition);
 		    } else {
 			x.innerHTML = "Geolocation is not supported by this browser.";
