@@ -9,7 +9,10 @@
 	<p id="iphone"></p>
 		<script>
 		var x = document.getElementById("demo");
-		if((navigator.userAgent.match("/iPhone/i")) {$("iphone").html("You appear to be on an iPhone. Be sure that Safari is permitted to use your location in Settings > Privacy > Location Services");}
+		if(navigator.userAgent.match("/iPhone/i")) {
+			$("iphone").html("You appear to be on an iPhone. Be sure that Safari is permitted to use your location in Settings > Privacy > Location Services");
+			
+		}
 
 		function getLocation() {
 		    if (navigator.geolocation) {
