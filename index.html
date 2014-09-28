@@ -8,7 +8,7 @@
 	<p id="demo">Click to get your coordinates</p>
 	
 		<script>
-		var x = $("#demo");
+		var x = document.getElementById("demo");
 		function getLocation() {
 		    if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(showPosition);
