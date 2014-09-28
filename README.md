@@ -1,2 +1,2 @@
-geolocation-test
+geolocation
 ================
