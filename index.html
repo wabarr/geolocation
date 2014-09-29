@@ -25,13 +25,14 @@
 			x.innerHTML = "Geolocation is not supported by this browser.";
 		    }
 		}
+
 		function showPosition(position) {
 		   // Provide your access token
             L.mapbox.accessToken = 'pk.eyJ1Ijoid2FiYXJyIiwiYSI6IkFlcVhEUnMifQ.hrdj4uPtG5A3Kp9H5PNTyQ';
             // Create a map in the div #map
             var map = L.mapbox.map('map', 'wabarr.jklp6mn0');
-            map.setView([position.coords.latitude, position,coords.longitude], 6);
-            L.marker([position.coords.latitude, position,coords.longitude])
+            map.setView([position.coords.latitude, position.coords.longitude], 6);
+            L.marker([position.coords.latitude, position.coords.longitude])
                             .bindPopup(val["you are here!"])
                             .addTo(map);
 		}
