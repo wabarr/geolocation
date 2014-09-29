@@ -31,7 +31,7 @@
             L.mapbox.accessToken = 'pk.eyJ1Ijoid2FiYXJyIiwiYSI6IkFlcVhEUnMifQ.hrdj4uPtG5A3Kp9H5PNTyQ';
             // Create a map in the div #map
             var map = L.mapbox.map('map', 'wabarr.jklp6mn0');
-            map.setView([position.coords.latitude, position.coords.longitude], 6);
+            map.setView([position.coords.latitude, position.coords.longitude], 10);
             L.marker([position.coords.latitude, position.coords.longitude])
                             .bindPopup("you are here!")
                             .addTo(map);
