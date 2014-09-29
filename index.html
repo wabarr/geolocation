@@ -7,6 +7,7 @@
 	<button onclick="getLocation()">Try It</button>
 	<p id="demo">Click to get your coordinates</p>
 	<p id="iphone"></p>
+    <div id="map" style="height:500px"></div>
 		<script>
 		var x = document.getElementById("demo");
 		if(navigator.userAgent.match(/iPhone/i)) {
@@ -23,10 +24,17 @@
 		    }
 		}
 		function showPosition(position) {
-		    x.innerHTML = "Latitude: " + position.coords.latitude + 
-		    "<br>Longitude: " + position.coords.longitude + 
-		    "<br>Accuracy: " + position.coords.accuracy + " meters"; 
+		   // Provide your access token
+            L.mapbox.accessToken = 'pk.eyJ1Ijoid2FiYXJyIiwiYSI6IkFlcVhEUnMifQ.hrdj4uPtG5A3Kp9H5PNTyQ';
+            // Create a map in the div #map
+            var map = L.mapbox.map('map', 'wabarr.jklp6mn0');
+            map.setView([position.coords.latitude, position,coords.longitude], 6);
+            L.marker([position.coords.latitude, position,coords.longitude])
+                            .bindPopup(val["you are here!"])
+                            .addTo(map);
 		}
 		</script>
+
+
 	</body>
 </html>
