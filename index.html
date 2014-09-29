@@ -7,7 +7,7 @@
 	
 	<body>
 	<button onclick="getLocation()">Try It</button>
-	<p id="demo">Click to get your coordinates</p>
+	<h3 id="demo">Click to get your coordinates</h3>
 	<p id="iphone"></p>
     <div id="map" style="height:500px"></div>
 		<script>
@@ -37,7 +37,7 @@
                             .addTo(map);
             $("#iphone").remove();
             $("button").remove();
-            $("#demo").html("Here is a map of your position");
+            $("#demo").html("<h3>Here is a map of your position. Accuracy: +- " + position.coords.accuracy = " meters.</h3>");
 
 
 		}
